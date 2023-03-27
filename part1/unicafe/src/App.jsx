@@ -11,13 +11,13 @@ const App = () => {
 
   const handleGoodFeedback = () => {
     setGood(good + 1);
-  }
+  };
   const handleNeutralFeedback = () => {
-    setNeutral(neutral +1);
-  }
+    setNeutral(neutral + 1);
+  };
   const handleBadFeedback = () => {
     setBad(bad + 1);
-  }
+  };
   return (
     <>
       <Header title="give feedback" />
@@ -28,6 +28,15 @@ const App = () => {
       <Feedback label="good" result={good} />
       <Feedback label="neutral" result={neutral} />
       <Feedback label="bad" result={bad} />
+      <Feedback label="all" result={good + neutral + bad} />
+      <Feedback
+        label="average"
+        result={(good - bad) / (good + neutral + bad)}
+      />
+      <Feedback
+        label="positive"
+        result={(good * 100) / (good + neutral + bad) + `%`}
+      />
     </>
   );
 };
