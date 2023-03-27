@@ -1,6 +1,6 @@
 import React from "react";
 
-const Feedback = ({ label, result }) => {
+const StatisticLine = ({ label, result }) => {
   return (
     <p>
       {label} {result}
@@ -8,4 +8,4 @@ const Feedback = ({ label, result }) => {
   );
 };
 
-export default Feedback;
+export default StatisticLine;

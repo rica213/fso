@@ -1,5 +1,5 @@
 import React from "react";
-import Feedback from "./Feedback";
+import StatisticLine from "./StatisticLine";
 
 const Statistics = ({ good, neutral, bad }) => {
   if (!good && !neutral && !bad) {
@@ -7,15 +7,15 @@ const Statistics = ({ good, neutral, bad }) => {
   }
   return (
     <>
-      <Feedback label="good" result={good} />
-      <Feedback label="neutral" result={neutral} />
-      <Feedback label="bad" result={bad} />
-      <Feedback label="all" result={good + neutral + bad} />
-      <Feedback
+      <StatisticLine label="good" result={good} />
+      <StatisticLine label="neutral" result={neutral} />
+      <StatisticLine label="bad" result={bad} />
+      <StatisticLine label="all" result={good + neutral + bad} />
+      <StatisticLine
         label="average"
         result={(good - bad) / (good + neutral + bad)}
       />
-      <Feedback
+      <StatisticLine
         label="positive"
         result={(good * 100) / (good + neutral + bad) + `%`}
       />
