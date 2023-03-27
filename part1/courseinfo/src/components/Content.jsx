@@ -1,12 +1,12 @@
 import React from "react";
-import Part from './Part';
+import Part from "./Part";
 
-const Content = ({ part, content }) => {
+const Content = ({parts}) => {
   return (
     <div>
-      <Part part={part[0]} content={content[0]} />
-      <Part part={part[1]} content={content[1]} />
-      <Part part={part[2]} content={content[2]} />
+      <Part part={parts[0].name} content={parts[0].exercises} />
+      <Part part={parts[1].name} content={parts[1].exercises} />
+      <Part part={parts[2].name} content={parts[2].exercises} />
     </div>
   );
 };
